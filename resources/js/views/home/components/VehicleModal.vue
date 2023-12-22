@@ -31,10 +31,7 @@
                                 class="form-control"
                                 id="price"
                             />
-                            <div
-                                class="invalid-feedback"
-                                v-if="hasError('price')"
-                            >
+                            <div class="text-danger" v-if="hasError('price')">
                                 {{ getError("price") }}
                             </div>
                         </div>
@@ -49,7 +46,7 @@
                                 <option value="Luxury">Luxury</option>
                             </select>
                             <div
-                                class="invalid-feedback"
+                                class="text-danger"
                                 v-if="hasError('vehicle_type')"
                             >
                                 {{ getError("vehicle_type") }}
@@ -79,7 +76,9 @@
 </template>
 
 <script>
+import Error from "../../../lib/Mixins/Error";
 export default {
+    mixins: [Error],
     props: {
         formData: {
             type: Object,

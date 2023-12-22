@@ -11,7 +11,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _lib_Mixins_Error__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/Mixins/Error */ "./resources/js/lib/Mixins/Error.js");
+/* harmony import */ var _lib_Mixins_Error__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lib_Mixins_Error__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  mixins: [(_lib_Mixins_Error__WEBPACK_IMPORTED_MODULE_0___default())],
   props: {
     formData: {
       type: Object,
@@ -198,7 +202,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     checherror: function checherror() {
       console.log("here");
-      console.log(this.errors);
     },
     add: function add() {
       return this.response(this.vehicleRepository.create(this.formData));
@@ -289,7 +292,7 @@ var _hoisted_10 = /*#__PURE__*/_withScopeId(function () {
 });
 var _hoisted_11 = {
   key: 0,
-  "class": "invalid-feedback"
+  "class": "text-danger"
 };
 var _hoisted_12 = {
   "class": "form-group"
@@ -312,7 +315,7 @@ var _hoisted_15 = /*#__PURE__*/_withScopeId(function () {
 var _hoisted_16 = [_hoisted_14, _hoisted_15];
 var _hoisted_17 = {
   key: 0,
-  "class": "invalid-feedback"
+  "class": "text-danger"
 };
 var _hoisted_18 = {
   "class": "modal-footer"

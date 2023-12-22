@@ -113,7 +113,6 @@ export default {
         },
         checherror() {
             console.log("here");
-            console.log(this.errors);
         },
         add() {
             return this.response(this.vehicleRepository.create(this.formData));
