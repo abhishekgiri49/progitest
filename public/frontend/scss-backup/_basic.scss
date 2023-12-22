@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"); // Fonts Load Here
+@import "_vars"; // All Declared Variables are here
+@import "_mixin"; // All Utilized Mixins are here
+:root {
+  --vw: 0.052vw;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  color: $text;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+::selection {
+  background: $b;
+  color: $w;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  font-size: calc(var(--vw) * 16);
+}
+@for $mt from 1 through 100 {
+  #{".mt--"}#{$mt} {
+    margin-top: #{"calc(var(--vw)*"}#{$mt}#{")"};
+  }
+}
+.site--logo a {
+  @include flex;
+  width: calc(var(--vw) * 150);
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
